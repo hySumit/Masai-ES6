@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MASAI COUNTER</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            text-align: center;
+            margin: 50px;
+        }
+
+        #display {
+            font-size: 2em;
+            margin-bottom: 20px;
+            border: 1px solid black;
+            background-color: rgba(139, 139, 139, 0.795);
+            width: 25%;
+            height: 70px;
+            margin: auto;
+            border-radius: 30px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 20px;
+        }
+
+        button {
+            /* margin-top: 50px; */
+            font-size: 1em;
+            padding: 10px;
+            margin: 5px;
+            cursor: pointer;
+        }
+
+        .main {
+            border: 2px solid black;
+            box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
+            height: 400px;
+            background-color: #D9AFD9;
+            background-image: linear-gradient(0deg, #D9AFD9 0%, #97D9E1 100%);
+
+            color: black;
+            border-radius: 20px;
+        }
+
+        h1 {
+            color: rgb(226, 11, 11);
+            margin-top: 5vh;
+            background-color: white;
+            display: inline-block;
+            width: 400px;
+            border-radius: 30px;
+            padding: 10px;
+        }
+
+        hr {
+            width: 60%;
+            margin: auto;
+            margin-top: 3vh;
+            margin-bottom: 5vh;
+            border: 2px solid black;
+            /* padding: 10px; */
+            /* gap: 10px; */
+        }
+
+        span {
+            color: black;
+
+        }
+
+        button {
+            border: none;
+            background-color: black;
+            color: white;
+            border-radius: 70px;
+            width: 120px;
+            height: 70px;
+
+        }
+
+        button:hover {
+            background-color: rgb(9, 153, 153);
+            /* color: black; */
+            box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
+            transition: all 0.3s ease-out;
+
+        }
+
+        @media all and (max-width: 750px) {
+            .main {
+                height: 590px;
+            }
+
+            #display {
+                width: 200px;
+            }
+        }
+
+        #inhours,
+        #inminutes,
+        #inseconds {
+            border: none;
+            width: 80px;
+            height: 70px;
+            text-align: center;
+            border-radius: 20px;
+            font-size: 16px;
+
+
+        }
+
+
+        input::-webkit-outer-spin-button,
+        input::-webkit-inner-spin-button {
+            -webkit-appearance: none;
+            margin: 0;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="main">
+        <h1 style="text-align: center;"> <span>Masai</span>Counter</h1>
+        <hr>
+        <div id="display">00:00</div>
+        <div class="buttons">
+            <button id="start" onclick="start()">START</button>
+            <button id="inc" onclick="inc()">INCREMENT</button>
+            <button id="dec" onclick="decrement()">DECREMENT</button>
+        </div>
+
+    </div>
+
+</body>
+<script src="script.js"></script>
+</html>
+
